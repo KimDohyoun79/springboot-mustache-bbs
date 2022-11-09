@@ -1,0 +1,22 @@
+server:
+  port: 8080
+  servlet:
+    encoding:
+      force-response: true
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://ec2-3-38-186-84.ap-northeast-2.compute.amazonaws.com:3306/likelion-db #jdbc:mysql://localhost:3306/likelion-db
+    username: root
+    password: 12345678
+
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    database : mysql
+    hibernate.ddl-auto : update
+    hibernate.naming.strategy : org.hibernate.cfg.ImprovedNamingStrategy
+    hibernate.naming.physical-strategy : org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    generate-ddl : false
+    properties.hibernate.format_sql : true
+    properties.hibernate.enable_lazy_load_no_trans : true
